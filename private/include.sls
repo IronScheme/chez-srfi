@@ -8,7 +8,7 @@
   (import 
     (except (rnrs) read)
     (for (srfi private include compat) expand)
-    (srfi private include read))
+    (for (srfi private include read) expand))
   
   (define-syntax include/resolve
     (lambda (stx)
