@@ -194,7 +194,10 @@
 ;; each entry is ( utc seconds since epoch . # seconds to add for tai )
 ;; note they go higher to lower, and end in 1972.
 (define tm:leap-second-table
- '((1230768000 . 34)
+ '((1483228800 . 37)
+  (1435708800 . 36)
+  (1341100800 . 35)
+  (1230768000 . 34)
   (1136073600 . 33)
   (915148800 . 32)
   (867715200 . 31)
@@ -1051,7 +1054,7 @@
 			port)))
    (cons #\k (lambda (date pad-with port)
 	       (display (tm:padding (date-hour date)
-				    #\0 2)
+				    #\space 2)
                         port)))
    (cons #\l (lambda (date pad-with port)
 	       (let ((hr (if (> (date-hour date) 12)
