@@ -125,7 +125,7 @@
 (or (eq? (vector-ref '#(a b c d) 2) 'c)
     (fail 'vector-ref))
 
-(or (eq? (vector-length '#(a b c)) 3)
+(or (eqv? (vector-length '#(a b c)) 3)
     (fail 'vector-length))
 
 (or (equal? (vector-fold (lambda (index len str) (max (string-length str) len))
